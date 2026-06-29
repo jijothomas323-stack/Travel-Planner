@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Globe Genie | Your AI Travel Companion</title>
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/hero.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+      
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+    <div class="logo">
+        Globe <span>Genie</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#flights">Flights</a></li>
+        <li><a href="#hotels">Hotels</a></li>
+        <li><a href="#restaurants">Restaurants</a></li>
+        <li><a href="#planner">AI Planner</a></li>
+    </ul>
+
+    <div class="buttons">
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+    </div>
+
+</nav>
+<!-- Hero Section -->
+ <section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Plan Your Dream Vacation with AI</h1>
+        <p>Compare flights, hotels, trains, buses, restaurants and sightseeing in one place</p>
+        <div class="hero-buttons">
+            <a href="#planner" class="btn-start">Start Planning</a>
+            <a href="#features" class="btn-learn">Learn More</a>
+        </div>
+    
+    </div>
+    </section>
+    <section class="planner" id="planner">
+
+    <div class="planner-card">
+
+        <h2>🤖 AI Trip Planner</h2>
+
+        <p>Tell us your travel plans and let AI build your perfect vacation.</p>
+
+        <div class="planner-grid">
+
+            <input type="text" id="destination" placeholder="Destination">
+
+            <input type="date" id="checkin">
+
+            <input type="date" id="checkout">
+
+            <input type="number" id="travellers" placeholder="Travellers">
+
+            <input type="number" id="budget" placeholder="Budget">
+
+            <select id="travel-type">
+                <option>Travel Type</option>
+                <option>Solo</option>
+                <option>Couple</option>
+                <option>Family</option>
+                <option>Friends</option>
+            </select>
+         
+        </div>
+
+        <button class="planner-btn">
+            ✨ Generate My AI Trip
+        </button>
+        <div id="trip-result"></div>
+
+    </div>
+
+</section>
+<!-- Popular Destinations -->
+
+<section class="destinations" id="destinations">
+
+    <h2>🌍 Popular Destinations</h2>
+    <p>Explore the world's most loved travel destinations.</p>
+
+    <div class="destination-grid">
+
+        <div class="destination-card">
+            <img src="images/paris.jpg.jpeg" alt="Paris">
+            <div class="card-content">
+                <h3>Paris</h3>
+                <p>Starting from ₹48,000</p>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="images/dubai.jpg.jpeg" alt="Dubai">
+            <div class="card-content">
+                <h3>Dubai</h3>
+                <p>Starting from ₹30,000</p>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="images/maldives.jpg.jpeg" alt="Maldives">
+            <div class="card-content">
+                <h3>Maldives</h3>
+                <p>Starting from ₹65,000</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="flights" id="flights">
+
+    <h2>✈️ Best Flight Deals</h2>
+    <p>Compare flights from top airlines at the best prices.</p>
+
+    <div class="flight-grid">
+
+        <div class="flight-card">
+            <h3>Delhi → Dubai</h3>
+            <p>Emirates Airlines</p>
+            <span class="price">₹18,999</span>
+            <button>Book Now</button>
+        </div>
+
+        <div class="flight-card">
+            <h3>Mumbai → Paris</h3>
+            <p>Air France</p>
+            <span class="price">₹42,500</span>
+            <button>Book Now</button>
+        </div>
+
+        <div class="flight-card">
+            <h3>Bengaluru → Maldives</h3>
+            <p>IndiGo</p>
+            <span class="price">₹15,999</span>
+            <button>Book Now</button>
+        </div>
+
+    </div>
+
+</section>
+<section class="hotels" id="hotels">
+    <h2>🏨 Top Hotels</h2>
+    <p>Stay at the world's finest hotels and resorts.</p>
+
+    <div class="hotel-grid">
+
+        <div class="hotel-card">
+            <img src="images/hotel-paris.jpg" alt="Paris Hotel">
+            <div class="hotel-info">
+                <h3>Le Meurice</h3>
+                <p>📍 Paris</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <h4>₹22,999 / Night</h4>
+                <button>Book Now</button>
+            </div>
+        </div>
+
+        <div class="hotel-card">
+            <img src="images/hotel-dubai.jpg" alt="Dubai Hotel">
+            <div class="hotel-info">
+                <h3>Burj Al Arab</h3>
+                <p>📍 Dubai</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <h4>₹35,999 / Night</h4>
+                <button>Book Now</button>
+            </div>
+        </div>
+
+        <div class="hotel-card">
+            <img src="images/hotel-maldives.jpg" alt="Maldives Hotel">
+            <div class="hotel-info">
+                <h3>Soneva Jani</h3>
+                <p>📍 Maldives</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <h4>₹48,999 / Night</h4>
+                <button>Book Now</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="restaurants" id="restaurants">
+
+    <h2>🍽️ Top Restaurants</h2>
+    <p>Experience world-class dining wherever you travel.</p>
+
+    <div class="restaurant-grid">
+
+        <div class="restaurant-card">
+            <img src="images/restaurant-paris.jpg.jpeg" alt="Restaurant Paris">
+
+            <div class="restaurant-info">
+                <h3>Le Jules Verne</h3>
+                <p>📍 Paris</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <h4>₹8,500 / Person</h4>
+                <button>Reserve Table</button>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <img src="images/restaurant-dubai.jpg.jpeg" alt="Restaurant Dubai">
+
+            <div class="restaurant-info">
+                <h3>Ossiano</h3>
+                <p>📍 Dubai</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <h4>₹10,500 / Person</h4>
+                <button>Reserve Table</button>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <img src="images/restaurant-maldives.jpg.jpeg" alt="Restaurant Maldives">
+
+            <div class="restaurant-info">
+                <h3>SEA Restaurant</h3>
+                <p>📍 Maldives</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <h4>₹12,999 / Person</h4>
+                <button>Reserve Table</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="features">
+
+    <h2>Why Choose Globe Genie?</h2>
+
+    <div class="feature-container">
+
+        <div class="feature-card">
+            <div class="icon">🤖</div>
+            <h3>AI Travel Planner</h3>
+            <p>Personalized itineraries powered by Artificial Intelligence.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">✈️</div>
+            <h3>Flight Comparison</h3>
+            <p>Compare flights from hundreds of airlines instantly.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">🏨</div>
+            <h3>Best Hotels</h3>
+            <p>Find top-rated hotels at the best prices.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">🛡️</div>
+            <h3>Secure Booking</h3>
+            <p>Safe payments and trusted travel partners.</p>
+        </div>
+
+    </div>
+
+</section>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
