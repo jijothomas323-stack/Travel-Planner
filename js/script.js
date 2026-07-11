@@ -1,137 +1,273 @@
-document.querySelector(".planner-btn").addEventListener("click", function () {
+const generateBtn = document.getElementById("generateTrip");
 
+generateBtn.addEventListener("click", generateTrip);
+
+function generateTrip() {
+
+    const plannerResult = document.getElementById("plannerResult");
     const destination = document.getElementById("destination").value.trim();
-const budget = Number(document.getElementById("budget").value);
-const travellers = document.getElementById("travellers").value;
-const travelType = document.getElementById("travel-type").value;
+const budget = document.getElementById("budget").value;
+const duration = document.getElementById("duration").value;
+const style = document.getElementById("style").value;
+const prompt = document.getElementById("prompt").value.trim();
+console.log(destination);
 
-    let plan = "";
-
-    if (destination.toLowerCase() === "dubai") {
-        plan = `
-<h3>🌍 Destination: Dubai</h3>
-
-<h4>📅 Day 1</h4>
-<ul>
-<li>Check in to Burj Al Arab</li>
-<li>Visit Dubai Mall</li>
-<li>Watch Dubai Fountain Show</li>
-</ul>
-
-<h4>📅 Day 2</h4>
-<ul>
-<li>Burj Khalifa Observation Deck</li>
-<li>Desert Safari</li>
-<li>BBQ Dinner</li>
-</ul>
-
-<h4>📅 Day 3</h4>
-<ul>
-<li>Dubai Marina Cruise</li>
-<li>Jumeirah Beach</li>
-<li>Shopping at Mall of the Emirates</li>
-</ul>`;
+    if(destination.trim() === ""){
+        alert("Please enter a destination.");
+        return;
     }
+    const tripData = {
+    destination,
+    budget,
+    duration,
+    style,
+    prompt
+};
 
-    else if (destination.toLowerCase() === "paris") {
-        plan = `
-<h3>🌍 Destination: Paris</h3>
+localStorage.setItem("tripData", JSON.stringify(tripData));
 
-<h4>📅 Day 1</h4>
+    plannerResult.innerHTML = `
+        <div class="loading">
+            <h2>🤖 AI is planning your trip...</h2>
+            <p>Please wait a few seconds.</p>
+        </div>
+    `;
+
+    setTimeout(() => {
+
+    window.location.href = "dashboard.html";
+
+},2000);
+
+}
+function createTrip(destination,budget,duration,style,prompt){
+
+let itinerary = "";
+let flights = "";
+let hotels = "";
+let restaurants = "";
+let estimatedCost = "";
+
+switch(destination.toLowerCase()){
+
+case "dubai":
+
+flights = `
+<div class="travel-card">
+<h4>Emirates</h4>
+<p>₹24,000</p>
+<a href="https://www.emirates.com" target="_blank">Book Now</a>
+</div>
+
+<div class="travel-card">
+<h4>IndiGo</h4>
+<p>₹17,999</p>
+<a href="https://www.goindigo.in" target="_blank">Book Now</a>
+</div>
+`;
+
+hotels = `
+<div class="travel-card">
+<h4>Atlantis The Palm ⭐⭐⭐⭐⭐</h4>
+<p>₹22,000 / Night</p>
+<a href="https://www.atlantis.com/dubai" target="_blank">Book Hotel</a>
+</div>
+
+<div class="travel-card">
+<h4>Rove Downtown ⭐⭐⭐⭐</h4>
+<p>₹8,500 / Night</p>
+<a href="https://www.rovehotels.com" target="_blank">Book Hotel</a>
+</div>
+`;
+
+restaurants = `
 <ul>
-<li>Eiffel Tower</li>
-<li>Seine River Cruise</li>
+<li>🍽 Ossiano</li>
+<li>🍽 Pierchic</li>
+<li>🍽 Al Dawaar</li>
+</ul>
+`;
+
+estimatedCost = "₹79,999";
+
+itinerary=`
+
+<h3>🗓 Day 1</h3>
+<ul>
+<li>✈ Arrive in Dubai</li>
+<li>🏨 Hotel Check-in</li>
+<li>🌆 Burj Khalifa</li>
+<li>⛲ Dubai Fountain</li>
 </ul>
 
-<h4>📅 Day 2</h4>
+<h3>🗓 Day 2</h3>
 <ul>
-<li>Louvre Museum</li>
-<li>Notre-Dame Cathedral</li>
+<li>🏖 Jumeirah Beach</li>
+<li>🛍 Dubai Mall</li>
+<li>🐠 Aquarium</li>
 </ul>
 
-<h4>📅 Day 3</h4>
-<ul>
-<li>Champs-Élysées</li>
-<li>Arc de Triomphe</li>
-<li>French Café Experience</li>
-</ul>`;
-    }
+`;
 
-    else if (destination.toLowerCase() === "maldives") {
-        plan = `
-<h3>🌍 Destination: Maldives</h3>
+break;
 
-<h4>📅 Day 1</h4>
+case "paris":
+
+flights = `
+<div class="travel-card">
+<h4>Air France</h4>
+<p>₹45,000</p>
+<a href="https://wwws.airfrance.in" target="_blank">Book Now</a>
+</div>
+`;
+
+hotels = `
+<div class="travel-card">
+<h4>Le Meurice ⭐⭐⭐⭐⭐</h4>
+<p>₹30,000 / Night</p>
+<a href="https://www.dorchestercollection.com/paris/le-meurice" target="_blank">Book Hotel</a>
+</div>
+`;
+
+restaurants = `
 <ul>
-<li>Water Villa Check-in</li>
-<li>Private Beach</li>
+<li>🍽 Le Jules Verne</li>
+<li>🍽 Epicure</li>
+<li>🍽 Septime</li>
+</ul>
+`;
+
+estimatedCost = "₹1,20,000";
+
+itinerary=`
+
+<h3>🗓 Day 1</h3>
+<ul>
+<li>🗼 Eiffel Tower</li>
+<li>🚢 Seine Cruise</li>
 </ul>
 
-<h4>📅 Day 2</h4>
+<h3>🗓 Day 2</h3>
 <ul>
-<li>Snorkeling</li>
-<li>Dolphin Cruise</li>
+<li>🎨 Louvre Museum</li>
+<li>☕ Paris Café</li>
 </ul>
 
-<h4>📅 Day 3</h4>
+`;
+
+break;
+
+case "maldives":
+
+flights = `
+<div class="travel-card">
+<h4>Maldivian Airlines</h4>
+<p>₹22,000</p>
+<a href="https://maldivian.aero" target="_blank">Book Now</a>
+</div>
+`;
+
+hotels = `
+<div class="travel-card">
+<h4>Soneva Jani ⭐⭐⭐⭐⭐</h4>
+<p>₹48,000 / Night</p>
+<a href="https://soneva.com/resorts/soneva-jani" target="_blank">Book Hotel</a>
+</div>
+`;
+
+restaurants = `
 <ul>
-<li>Spa Therapy</li>
-<li>Sunset Dinner</li>
-</ul>`;
-    }
+<li>🍽 SEA Restaurant</li>
+<li>🍽 Ithaa Undersea Restaurant</li>
+</ul>
+`;
 
-    else {
-        plan = `<h3>Sorry!</h3>
-        <p>We don't have an itinerary for <b>${destination}</b> yet.</p>`;
-    }
+estimatedCost = "₹1,60,000";
 
-    // Budget Type
-    let budgetPlan = "";
+itinerary=`
 
-    if (budget >= 100000) {
-        budgetPlan = "💎 Luxury Trip";
-    } else if (budget >= 50000) {
-        budgetPlan = "🏨 Premium Trip";
-    } else {
-        budgetPlan = "💰 Budget Friendly Trip";
-    }
+<h3>🗓 Day 1</h3>
+<ul>
+<li>🏨 Water Villa</li>
+<li>🏖 Beach Walk</li>
+</ul>
 
-    // Weather
-    let weather = "";
+<h3>🗓 Day 2</h3>
+<ul>
+<li>🤿 Snorkeling</li>
+<li>🐬 Dolphin Cruise</li>
+</ul>
 
-    if (destination.toLowerCase() === "dubai")
-        weather = "☀️ 38°C • Sunny";
-    else if (destination.toLowerCase() === "paris")
-        weather = "🌤️ 22°C • Pleasant";
-    else if (destination.toLowerCase() === "maldives")
-        weather = "🌴 30°C • Tropical";
+`;
 
-    // Budget Breakdown
-    const hotel = Math.round(budget * 0.45);
-    const food = Math.round(budget * 0.20);
-    const sightseeing = Math.round(budget * 0.20);
-    const shopping = Math.round(budget * 0.15);
+break;
 
-   document.getElementById("trip-result").innerHTML = `
-${plan}
+default:
+
+itinerary=`
+
+<ul>
+
+<li>✈ Arrival</li>
+
+<li>🏨 Hotel</li>
+
+<li>🍽 Local Food</li>
+
+<li>📸 Sightseeing</li>
+
+</ul>
+
+`;
+
+}
+
+return `
+
+<div class="trip-result">
+
+    <h2>🌍 ${destination}</h2>
+
+    <p><strong>💰 Budget:</strong> ${budget}</p>
+    <p><strong>📅 Duration:</strong> ${duration}</p>
+    <p><strong>🎒 Travel Style:</strong> ${style}</p>
+
+    <hr>
+
+    ${itinerary}
+
+    <hr>
+
+    <h3>🤖 AI Recommendation</h3>
+
+    <p>${prompt}</p>
+
+    <hr>
+
+    <h3>✈ Recommended Flights</h3>
+
+${flights}
 
 <hr>
 
-<h3>${budgetPlan}</h3>
+<h3>🏨 Recommended Hotels</h3>
 
-<p>${weather}</p>
+${hotels}
 
-<h3>💰 Estimated Budget</h3>
+<hr>
 
-<ul>
-    <li>🏨 Hotel : ₹${hotel}</li>
-    <li>🍽️ Food : ₹${food}</li>
-    <li>🎟️ Sightseeing : ₹${sightseeing}</li>
-    <li>🛍️ Shopping : ₹${shopping}</li>
-</ul>
+<h3>🍽 Recommended Restaurants</h3>
 
-<p><strong>👥 Travellers:</strong> ${travellers}</p>
-<p><strong>🎒 Travel Type:</strong> ${travelType}</p>
+${restaurants}
+
+<hr>
+
+<h3>💰 Estimated Total Budget</h3>
+
+<h2>${estimatedCost}</h2>
+
+</div>
+
 `;
 
-});
+}

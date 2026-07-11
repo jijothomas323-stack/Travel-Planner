@@ -1,0 +1,117 @@
+.planner{
+    padding:120px 8%;
+    background:#f8fbff;
+}
+
+.planner-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    margin-top:60px;
+}
+
+.planner-form,
+.planner-result{
+
+    background:#fff;
+    padding:35px;
+    border-radius:22px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.planner-form input,
+.planner-form select,
+.planner-form textarea{
+
+    width:100%;
+    margin-bottom:20px;
+    padding:15px;
+
+    border:1px solid #ddd;
+    border-radius:12px;
+
+    font-size:15px;
+}
+
+.planner-form textarea{
+    resize:none;
+}
+
+.planner-form button{
+
+    width:100%;
+    padding:16px;
+
+    background:#F4B400;
+    color:#111;
+
+    font-size:17px;
+    font-weight:700;
+
+    border:none;
+    border-radius:14px;
+
+    cursor:pointer;
+    transition:.35s;
+}
+
+.planner-form button:hover{
+
+    transform:translateY(-4px);
+
+    background:#0B3D91;
+    color:white;
+}
+
+.planner-result{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    min-height:450px;
+}
+.loading{
+    text-align:center;
+    animation:pulse 1.2s infinite;
+}
+
+.trip-result{
+    text-align:left;
+}
+
+.trip-result h2{
+    color:#0B3D91;
+    margin-bottom:20px;
+}
+
+.trip-result h3{
+    margin:20px 0 10px;
+}
+
+.trip-result ul{
+    padding-left:20px;
+}
+
+.trip-result li{
+    margin-bottom:12px;
+}
+
+@keyframes pulse{
+
+0%{
+opacity:.5;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:.5;
+}
+
+}

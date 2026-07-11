@@ -1,0 +1,71 @@
+/* ==========================================================
+   GLOBE GENIE DASHBOARD V2
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F5F7FB;
+    color:#333;
+}
+
+/* ==========================================================
+   MAIN CONTAINER
+========================================================== */
+
+.dashboard{
+
+    width:95%;
+    max-width:1500px;
+
+    margin:40px auto;
+
+}
+
+/* ==========================================================
+   GRID LAYOUT
+========================================================== */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(330px,1fr));
+
+    gap:30px;
+
+    align-items:start;
+
+}
+
+/* ==========================================================
+   GENERIC CARD
+========================================================== */
+
+.dashboard-card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}

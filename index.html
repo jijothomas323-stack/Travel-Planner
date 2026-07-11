@@ -6,9 +6,18 @@
         <title>Globe Genie | Your AI Travel Companion</title>
         <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/hero.css">
         <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/destinations.css">
+        <link rel="stylesheet" href="css/flights.css">
+        <link rel="stylesheet" href="css/hotels.css">
+        <link rel="stylesheet" href="css/restaurants.css">
+        <link rel="stylesheet" href="css/planner.css">
         <link rel="stylesheet" href="css/responsive.css">
     </head>
       
@@ -26,7 +35,6 @@
         <li><a href="#flights">Flights</a></li>
         <li><a href="#hotels">Hotels</a></li>
         <li><a href="#restaurants">Restaurants</a></li>
-        <li><a href="#planner">AI Planner</a></li>
     </ul>
 
     <div class="buttons">
@@ -37,85 +45,211 @@
 </nav>
 <!-- Hero Section -->
  <section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
     <div class="hero-content">
-        <h1>Plan Your Dream Vacation with AI</h1>
-        <p>Compare flights, hotels, trains, buses, restaurants and sightseeing in one place</p>
+
+        <span class="hero-tag">
+            🌍 AI Powered Travel Platform
+        </span>
+
+        <h1>
+            Plan Your Dream <br>
+            Vacation with <span>AI</span>
+        </h1>
+
+        <p>
+            Compare flights, discover luxury hotels,
+            explore restaurants and let AI create
+            your perfect itinerary in seconds.
+        </p>
+
         <div class="hero-buttons">
-            <a href="#planner" class="btn-start">Start Planning</a>
-            <a href="#features" class="btn-learn">Learn More</a>
-        </div>
-    
-    </div>
-    </section>
-    <section class="planner" id="planner">
 
-    <div class="planner-card">
+            <a href="#planner" class="primary-btn">
+                Start Planning
+            </a>
 
-        <h2>🤖 AI Trip Planner</h2>
+            <a href="#" class="secondary-btn">
+                Explore Destinations
+            </a>
 
-        <p>Tell us your travel plans and let AI build your perfect vacation.</p>
-
-        <div class="planner-grid">
-
-            <input type="text" id="destination" placeholder="Destination">
-
-            <input type="date" id="checkin">
-
-            <input type="date" id="checkout">
-
-            <input type="number" id="travellers" placeholder="Travellers">
-
-            <input type="number" id="budget" placeholder="Budget">
-
-            <select id="travel-type">
-                <option>Travel Type</option>
-                <option>Solo</option>
-                <option>Couple</option>
-                <option>Family</option>
-                <option>Friends</option>
-            </select>
-         
         </div>
 
-        <button class="planner-btn">
-            ✨ Generate My AI Trip
-        </button>
-        <div id="trip-result"></div>
+        <div class="hero-stats">
+
+            <div class="stat-box">
+                <h2>250K+</h2>
+                <span>Happy Travelers</span>
+            </div>
+
+            <div class="stat-box">
+                <h2>120+</h2>
+                <span>Countries</span>
+            </div>
+
+            <div class="stat-box">
+                <h2>4.9★</h2>
+                <span>Average Rating</span>
+            </div>
+
+        </div>
 
     </div>
 
 </section>
-<!-- Popular Destinations -->
+<section class="search-box">
 
-<section class="destinations" id="destinations">
+<div class="search-container">
 
-    <h2>🌍 Popular Destinations</h2>
-    <p>Explore the world's most loved travel destinations.</p>
+<div class="field">
+<label>Destination</label>
+<input type="text" placeholder="Where to?">
+</div>
+
+<div class="field">
+<label>Budget</label>
+<select>
+<option>Any Budget</option>
+<option>₹20,000</option>
+<option>₹50,000</option>
+<option>₹1,00,000+</option>
+</select>
+</div>
+
+<div class="field">
+<label>Start Date</label>
+<input type="date">
+</div>
+
+<div class="field">
+<label>End Date</label>
+<input type="date">
+</div>
+
+<div class="field">
+<label>Travelers</label>
+<select>
+<option>1 Traveler</option>
+<option>2 Travelers</option>
+<option>Family</option>
+</select>
+</div>
+
+<button class="search-btn">
+🔍 Search Trip
+</button>
+
+</div>
+
+</section>
+    
+            <section class="destinations" id="destinations">
+
+    <div class="section-title">
+        <span>🌍 Explore Popular Destinations</span>
+        <h2>Discover Your Next Adventure</h2>
+        <p>
+            Handpicked destinations loved by millions of travelers worldwide.
+        </p>
+    </div>
 
     <div class="destination-grid">
 
+        <!-- Paris -->
         <div class="destination-card">
+
             <img src="images/paris.jpg.jpeg" alt="Paris">
-            <div class="card-content">
+
+            <div class="destination-info">
+
+                <span class="country">🇫🇷 France</span>
+
                 <h3>Paris</h3>
-                <p>Starting from ₹48,000</p>
+
+                <p>
+                    Romantic streets, iconic landmarks and unforgettable cuisine.
+                </p>
+
+                <div class="destination-bottom">
+
+                    <span class="price">
+                        From ₹79,999
+                    </span>
+
+                    <button>
+                        Explore
+                    </button>
+
+                </div>
+
             </div>
+
         </div>
 
+        <!-- Dubai -->
+
         <div class="destination-card">
+
             <img src="images/dubai.jpg.jpeg" alt="Dubai">
-            <div class="card-content">
+
+            <div class="destination-info">
+
+                <span class="country">🇦🇪 UAE</span>
+
                 <h3>Dubai</h3>
-                <p>Starting from ₹30,000</p>
+
+                <p>
+                    Luxury shopping, skyscrapers and desert adventures.
+                </p>
+
+                <div class="destination-bottom">
+
+                    <span class="price">
+                        From ₹59,999
+                    </span>
+
+                    <button>
+                        Explore
+                    </button>
+
+                </div>
+
             </div>
+
         </div>
 
+        <!-- Maldives -->
+
         <div class="destination-card">
+
             <img src="images/maldives.jpg.jpeg" alt="Maldives">
-            <div class="card-content">
+
+            <div class="destination-info">
+
+                <span class="country">🇲🇻 Maldives</span>
+
                 <h3>Maldives</h3>
-                <p>Starting from ₹65,000</p>
+
+                <p>
+                    Crystal-clear lagoons and luxurious overwater villas.
+                </p>
+
+                <div class="destination-bottom">
+
+                    <span class="price">
+                        From ₹69,999
+                    </span>
+
+                    <button>
+                        Explore
+                    </button>
+
+                </div>
+
             </div>
+
         </div>
 
     </div>
@@ -123,155 +257,304 @@
 </section>
 <section class="flights" id="flights">
 
-    <h2>✈️ Best Flight Deals</h2>
-    <p>Compare flights from top airlines at the best prices.</p>
+    <div class="section-title">
+        <span>✈️ Best Flight Deals</span>
+        <h2>Fly Smarter, Travel Better</h2>
+        <p>Exclusive flight deals from top airlines around the world.</p>
+    </div>
 
     <div class="flight-grid">
 
         <div class="flight-card">
-            <h3>Delhi → Dubai</h3>
-            <p>Emirates Airlines</p>
-            <span class="price">₹18,999</span>
-            <button>Book Now</button>
+            <div class="airline">✈ Emirates</div>
+
+            <div class="flight-route">
+                <h3>Dubai → Paris</h3>
+                <span>7h 40m • Non-stop</span>
+            </div>
+
+            <div class="flight-price">
+                <h2>₹32,999</h2>
+                <button>Book Now</button>
+            </div>
         </div>
 
         <div class="flight-card">
-            <h3>Mumbai → Paris</h3>
-            <p>Air France</p>
-            <span class="price">₹42,500</span>
-            <button>Book Now</button>
+            <div class="airline">🇸🇬 Singapore Airlines</div>
+
+            <div class="flight-route">
+                <h3>Singapore → Maldives</h3>
+                <span>4h 15m • Direct</span>
+            </div>
+
+            <div class="flight-price">
+                <h2>₹28,499</h2>
+                <button>Book Now</button>
+            </div>
         </div>
 
         <div class="flight-card">
-            <h3>Bengaluru → Maldives</h3>
-            <p>IndiGo</p>
-            <span class="price">₹15,999</span>
-            <button>Book Now</button>
+            <div class="airline">🇮🇳 Air India</div>
+
+            <div class="flight-route">
+                <h3>Delhi → London</h3>
+                <span>9h 05m • Non-stop</span>
+            </div>
+
+            <div class="flight-price">
+                <h2>₹46,999</h2>
+                <button>Book Now</button>
+            </div>
         </div>
 
     </div>
 
 </section>
 <section class="hotels" id="hotels">
-    <h2>🏨 Top Hotels</h2>
-    <p>Stay at the world's finest hotels and resorts.</p>
+
+    <div class="section-title">
+        <span>🏨 Luxury Stays</span>
+        <h2>Featured Hotels</h2>
+        <p>Stay at world-class hotels with the best comfort and luxury.</p>
+    </div>
 
     <div class="hotel-grid">
 
         <div class="hotel-card">
-            <img src="images/hotel-paris.jpg" alt="Paris Hotel">
-            <div class="hotel-info">
-                <h3>Le Meurice</h3>
-                <p>📍 Paris</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <h4>₹22,999 / Night</h4>
-                <button>Book Now</button>
-            </div>
-        </div>
 
-        <div class="hotel-card">
             <img src="images/hotel-dubai.jpg" alt="Dubai Hotel">
+
             <div class="hotel-info">
                 <h3>Burj Al Arab</h3>
-                <p>📍 Dubai</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <h4>₹35,999 / Night</h4>
-                <button>Book Now</button>
+
+                <p>📍 Dubai, UAE</p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <div class="hotel-bottom">
+                    <h4>₹32,999 <span>/ night</span></h4>
+                    <button>Book Now</button>
+                </div>
+
             </div>
+
         </div>
 
         <div class="hotel-card">
+
+            <img src="images/hotel-paris.jpg" alt="Paris Hotel">
+
+            <div class="hotel-info">
+                <h3>Ritz Paris</h3>
+
+                <p>📍 Paris, France</p>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <div class="hotel-bottom">
+                    <h4>₹41,999 <span>/ night</span></h4>
+                    <button>Book Now</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hotel-card">
+
             <img src="images/hotel-maldives.jpg" alt="Maldives Hotel">
+
             <div class="hotel-info">
                 <h3>Soneva Jani</h3>
+
                 <p>📍 Maldives</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <h4>₹48,999 / Night</h4>
-                <button>Book Now</button>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <div class="hotel-bottom">
+                    <h4>₹79,999 <span>/ night</span></h4>
+                    <button>Book Now</button>
+                </div>
+
             </div>
+
         </div>
 
     </div>
+
 </section>
 <section class="restaurants" id="restaurants">
 
-    <h2>🍽️ Top Restaurants</h2>
-    <p>Experience world-class dining wherever you travel.</p>
+    <div class="section-title">
+        <span>🍽 Fine Dining</span>
+        <h2>Top Restaurants</h2>
+        <p>Discover world-class restaurants and unforgettable dining experiences.</p>
+    </div>
 
-    <div class="restaurant-grid">
+    <div class="restaurant-container">
 
-        <div class="restaurant-card">
-            <img src="images/restaurant-paris.jpg.jpeg" alt="Restaurant Paris">
+        <!-- Restaurant 1 -->
+        <div class="restaurant-page-card">
+            <img src="images/restaurant-paris.jpg.jpeg" alt="Restaurant">
 
-            <div class="restaurant-info">
+            <div class="restaurant-page-info">
+
+                <span class="restaurant-location">
+                    📍 Paris, France
+                </span>
+
                 <h3>Le Jules Verne</h3>
-                <p>📍 Paris</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <h4>₹8,500 / Person</h4>
-                <button>Reserve Table</button>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>French • Fine Dining</p>
+
+                <div class="restaurant-bottom">
+                    <h4>₹12,999 / Person</h4>
+
+                    <button>Reserve</button>
+                </div>
+
             </div>
         </div>
 
+        <!-- Restaurant 2 -->
+
         <div class="restaurant-card">
-            <img src="images/restaurant-dubai.jpg.jpeg" alt="Restaurant Dubai">
+
+            <img src="images/restaurant-dubai.jpg.jpeg" alt="Restaurant">
 
             <div class="restaurant-info">
-                <h3>Ossiano</h3>
-                <p>📍 Dubai</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <h4>₹10,500 / Person</h4>
-                <button>Reserve Table</button>
+
+                <span class="restaurant-location">
+                    📍 Dubai, UAE
+                </span>
+
+                <h3>At.mosphere</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>International • Luxury</p>
+
+                <div class="restaurant-bottom">
+
+                    <h4>₹8,999 / Person</h4>
+
+                    <button>Reserve</button>
+
+                </div>
+
             </div>
+
         </div>
 
+        <!-- Restaurant 3 -->
+
         <div class="restaurant-card">
-            <img src="images/restaurant-maldives.jpg.jpeg" alt="Restaurant Maldives">
+
+            <img src="images/restaurant-maldives.jpg.jpeg" alt="Restaurant">
 
             <div class="restaurant-info">
-                <h3>SEA Restaurant</h3>
-                <p>📍 Maldives</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <h4>₹12,999 / Person</h4>
-                <button>Reserve Table</button>
+
+                <span class="restaurant-location">
+                    📍 Maldives
+                </span>
+
+                <h3>Sea Underwater</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>Seafood • Premium</p>
+
+                <div class="restaurant-bottom">
+
+                    <h4>₹15,999 / Person</h4>
+
+                    <button>Reserve</button>
+
+                </div>
+
             </div>
+
         </div>
 
     </div>
 
 </section>
-<section class="features">
+<section class="planner" id="planner">
 
-    <h2>Why Choose Globe Genie?</h2>
+    <div class="section-title">
+        <span>🤖 AI Powered Planner</span>
+        <h2>Create Your Perfect Trip</h2>
+        <p>Let AI design your dream vacation in seconds.</p>
+    </div>
 
-    <div class="feature-container">
+    <div class="planner-container">
 
-        <div class="feature-card">
-            <div class="icon">🤖</div>
-            <h3>AI Travel Planner</h3>
-            <p>Personalized itineraries powered by Artificial Intelligence.</p>
+        <!-- Planner Form -->
+        <div class="planner-form">
+
+            <input
+                type="text"
+                id="destination"
+                placeholder="Destination">
+
+            <select id="budget">
+                <option>Budget</option>
+                <option>₹20k - ₹50k</option>
+                <option>₹50k - ₹1L</option>
+                <option>Luxury</option>
+            </select>
+
+            <select id="duration">
+                <option>Duration</option>
+                <option>3 Days</option>
+                <option>5 Days</option>
+                <option>1 Week</option>
+            </select>
+
+            <select id="style">
+                <option>Travel Style</option>
+                <option>Luxury</option>
+                <option>Adventure</option>
+                <option>Romantic</option>
+                <option>Family</option>
+            </select>
+
+            <textarea
+                id="prompt"
+                rows="5"
+                placeholder="Tell AI what kind of trip you want..."></textarea>
+
+            <button id="generateTrip">
+                ✨ Generate My AI Trip
+            </button>
+
         </div>
 
-        <div class="feature-card">
-            <div class="icon">✈️</div>
-            <h3>Flight Comparison</h3>
-            <p>Compare flights from hundreds of airlines instantly.</p>
-        </div>
+        <!-- Planner Result -->
+        <div class="planner-result" id="plannerResult">
 
-        <div class="feature-card">
-            <div class="icon">🏨</div>
-            <h3>Best Hotels</h3>
-            <p>Find top-rated hotels at the best prices.</p>
-        </div>
+            <h3>Your itinerary will appear here.</h3>
 
-        <div class="feature-card">
-            <div class="icon">🛡️</div>
-            <h3>Secure Booking</h3>
-            <p>Safe payments and trusted travel partners.</p>
         </div>
 
     </div>
 
 </section>
+
 <script
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
